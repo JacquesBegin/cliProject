@@ -1,17 +1,26 @@
 #!/usr/bin/env node
 
-const chalk = require("chalk");
-const boxen = require("boxen");
-const yargs = require("yargs");
 
-const options = yargs
-.usage("Usage: -n <name>")
-.option("n", { alias: "name", describe: "Your name", type: "string", demandOption: true })
-.argv;
 
-const greeting = `Hello ${options.name}!`;
 
-console.log(greeting);
+// The code below uses the yargs package to parse command line arguments.
+
+// const chalk = require("chalk");
+// const boxen = require("boxen");
+// const yargs = require("yargs");
+
+// const options = yargs
+// .usage("Usage: -n <name>")
+// .option("n", { alias: "name", describe: "Your name", type: "string", demandOption: true })
+// .argv;
+
+// const greeting = `Hello ${options.name}!`;
+
+// console.log(greeting);
+
+
+
+// The code below modifies the output design of the command line.
 
 // const greeting = chalk.white.bold("Hello!");
 
