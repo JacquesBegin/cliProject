@@ -1,5 +1,31 @@
 #!/usr/bin/env node
 
+const yargs = require("yargs");
+const fetch = require("node-fetch");
+const axios = require("axios");
+
+const options = yargs
+.usage("Usage: -n <name>")
+.option("n", { alias: "name", describe: "Your name", type: "string", demandOption: true })
+.argv;
+
+const greeting = `Hello, ${options.name}!`;
+
+console.log(greeting);
+
+console.log("Here's a random joke for you:");
+
+const url = "https://icanhazdadjoke.com/";
+
+// fetch(url, { headers: { 'Accept': 'application/json' } })
+// .then(res => {
+//   console.log(res);
+// });
+
+axios.get(url, { headers: { Accept: "application/json" } })
+ .then(res => {
+   console.log(res.data.joke);
+ });
 
 
 
