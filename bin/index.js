@@ -13,19 +13,14 @@ const options = yargs
 const greeting = `Hello, ${options.name}!`;
 console.log(greeting);
 
+
 if (options.search) {
   console.log(`Searching for jokes about ${options.search}...`)
 } else {
   console.log("Here's a random joke for you:");
 }
 
-
 const url = options.search ? `https://icanhazdadjoke.com/search?term=${escape(options.search)}` : "https://icanhazdadjoke.com/";
-
-// fetch(url, { headers: { 'Accept': 'application/json' } })
-// .then(res => {
-//   console.log(res);
-// });
 
 axios.get(url, { headers: { Accept: "application/json" } })
   .then(res => {
