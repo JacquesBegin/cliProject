@@ -8,3 +8,9 @@ let y = parseInt(tmpArray[1]);
 if (Number.isInteger(x) && Number.isInteger(y)) {
   console.log(`x + y = ${x + y}`);
 }
+
+function sum(num1, num2) {
+  console.log(`${num1} + ${num2} = ${num1 + num2}`);
+}
+
+sum(x, y);
